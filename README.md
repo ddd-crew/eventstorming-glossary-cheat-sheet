@@ -46,13 +46,13 @@ We can add value like we would do in a value stream map once we made the timelin
 **Pivotal Events**  
 With Pivotal Events, we start looking for the few most significant events in the flow. For an e-commerce website, they might look like “Article Added to Catalogue”, “Order Placed”, “Order Shipped”, “Payment Received” and “Order Delivered”. These are often the events with the highest number of people interested. 
 
-![Pivotal Events](./resources/pivotal-events.png)
+![Pivotal Events](./resources/pivotal-events.PNG)
 *Source: https://leanpub.com/ddd_first_15_years – Discovering Bounded Contexts with EventStorming — Alberto Brandolini*
 
 **Swimlanes**   
 Separating the whole flow into horizontal swimlanes, assigned to given actors or departments, is another tempting option since it improves readability. This seems the most obvious choice for people with a background in process modelling.
 
-![Boundaries](./resources/boundaries.png)
+![Boundaries](./resources/boundaries.PNG)
 *Source: https://leanpub.com/ddd_first_15_years – Discovering Bounded Contexts with EventStorming — Alberto Brandolini*
 
 ![Big picture tools](./resources/big-picture-tools.jpg)
@@ -60,14 +60,14 @@ Separating the whole flow into horizontal swimlanes, assigned to given actors or
 **Emerging Bounded Context**  
 From a Big Picture EventStorming we can picture Emerging Bounded Context. They are the first indicators of were to start deep-diving towards designing bounded context around business problems.
 
-![Emergent bounded context](./resources/emergent-bounded-contexts.png)
+![Emergent bounded context](./resources/emergent-bounded-contexts.PNG)
 *Source: https://leanpub.com/ddd_first_15_years – Discovering Bounded Contexts with EventStorming — Alberto Brandolini*
 
 ### Process modelling EventStorming
 
 The goal of process modelling EventStorming is to assess the health of a current process in the company. It helps the group create a shared state of mind of the current status quo of the process, finding bottlenecks and find parts of the system to decouple the existing software.
 
-![Process modelling](./resources/process-modelling.png)
+![Process modelling](./resources/process-modelling.PNG)
 *Source: https://leanpub.com/introducing_eventstorming*
 
 **Policy**  
