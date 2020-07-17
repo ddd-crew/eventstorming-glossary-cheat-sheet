@@ -1,0 +1,1 @@
+# eventstorming-glossary-cheat-sheet
