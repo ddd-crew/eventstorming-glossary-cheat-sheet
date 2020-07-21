@@ -190,6 +190,7 @@ Remember, Alberto calls EventStorming like a pizza. The paper roll and domain ev
 Thanks to all [existing and future contributors](https://github.com/ddd-crew/eventstorming-glossary-cheat-sheet/graphs/contributors) and to the following individuals who have all contributed to the EventStorming Glossary and Cheat sheet:
 
 - [Kenny Baas-Schwegler](https://github.com/baasie)
+- [Chris Richardson](https://github.com/cer)
 
 ## Contributions and Feedback
 
