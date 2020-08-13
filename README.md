@@ -32,16 +32,16 @@ The goal of Big Picture EventStorming is to assess the health of an existing lin
 ![Example big picture](./resources/big-picture.jpg)
 
 **Opportunity**  
-Because a Hotspot can have a negative association we also give people the chance to add opportunities. We use green because of the accosiation it has with something positive. Start using Opportunities after we made a consistent timeline.
+Because a Hotspot can have a negative association we also give people the chance to add opportunities. We use green because of the association it has with something positive. Start using Opportunities after we made a consistent timeline.
 
 **Actor/Agent**  
 Actor or Agent is a group of people, a department, a team or a specific person involved around a (group of) Domain Event(s). The official colour to use is a small yellow post-it.
 
 **System**  
-A system is a deployable IT System used as a solution for a problem in the domain. When we finished making the timeline consistent we can start mapping systems around Domain Events. There can also be duplicates and it can be anything from using Excell to some microservice. The official colour is a wide pink post-it.
+A system is a deployable IT System used as a solution for a problem in the domain. When we have finished making the timeline consistent, we can start mapping systems around Domain Events. There can also be duplicates and it can be anything from using Excell to some microservice. The official colour is a wide pink post-it.
 
 **Value**  
-We can add value like we would do in a value stream map once we made the timeline consistent. We do this to make explicit where the value is in our domain. We use the red and green small stickies to show positive and negative value.
+We can add value like we would do in a value stream map, after we have made the timeline consistent. We do this to make explicit where the value is in our domain. We use the red and green small stickies to show positive and negative value.
 
 **Pivotal Events**  
 With Pivotal Events, we start looking for the few most significant events in the flow. For an e-commerce website, they might look like “Article Added to Catalogue”, “Order Placed”, “Order Shipped”, “Payment Received” and “Order Delivered”. These are often the events with the highest number of people interested. 
@@ -57,8 +57,8 @@ Separating the whole flow into horizontal swimlanes, assigned to given actors or
 
 ![Big picture tools](./resources/big-picture-tools.jpg)
 
-**Emerging Bounded Context**  
-From a Big Picture EventStorming we can picture Emerging Bounded Context. They are the first indicators of were to start deep-diving towards designing bounded context around business problems.
+**Emerging Bounded Contexts**  
+From a Big Picture EventStorming we can picture Emerging Bounded Contexts. They are the first indicators of were to start deep-diving towards designing bounded contexts around business problems.
 
 ![Emergent bounded context](./resources/emergent-bounded-contexts.PNG)
 *Source: https://leanpub.com/ddd_first_15_years – Discovering Bounded Contexts with EventStorming — Alberto Brandolini*
