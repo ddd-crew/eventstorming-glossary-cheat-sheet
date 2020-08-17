@@ -58,10 +58,12 @@ Separating the whole flow into horizontal swimlanes, assigned to given actors or
 ![Big picture tools](./resources/big-picture-tools.jpg)
 
 **Emerging Bounded Contexts**  
-From a Big Picture EventStorming we can picture Emerging Bounded Contexts. They are the first indicators of were to start deep-diving towards designing bounded contexts around business problems.
+From a Big Picture EventStorming we can picture Emerging Bounded Contexts. They are the first indicators of where to start deep-diving towards designing bounded contexts around business problems.
 
 ![Emergent bounded context](./resources/emergent-bounded-contexts.PNG)
 *Source: https://leanpub.com/ddd_first_15_years – Discovering Bounded Contexts with EventStorming — Alberto Brandolini*
+
+![Big picture legend](./resources/big-picture-legend.jpg)
 
 ### Process modelling EventStorming
 
