@@ -98,7 +98,7 @@ An aggregate is a Domain-Driven Design pattern that represents cluster of domain
 
 ## Cheat Sheet
 
-### Preperations
+### Preparations
 
 #### Invites
 
