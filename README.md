@@ -73,7 +73,7 @@ The goal of process modelling EventStorming is to assess the health of a current
 *Source: https://leanpub.com/introducing_eventstorming*
 
 **Policy**  
-In essence, a policy is a reaction that says “whenever X happens, we do Y”. Eventually ending up with in the flow between a Domain Event and a Command/action. We use a big lilac post-it for these. A policy can be an automated process or manual. A policy can also be named a reactor, eventual business constraint or rule or a lie detector because there is always more to policies than you first think.
+A policy is a reaction that says “whenever X happens, we do Y”, eventually ending up with in the flow between a Domain Event and a Command/action. We use a big lilac post-it for these. A policy can be an automated process or manual. A policy can also be named a reactor, eventual business constraint or rule or a lie detector because there is always more to policies than you first think.
 
 **Command/Action**  
 Represents decisions, actions or intent. They can be initiated by an actor or from an automated process. During process EventStorming usually, the word "Action" usually fits better with stakeholders than command because it is easier to grasp. We officially use a blue coloured post-it for it.
@@ -92,7 +92,9 @@ Enforcing the colour coding is playing EventStorming by the rules. Often used af
 
 The outcome of a design level EventStorming is to design clean and maintainable Event-Driven software, to support rapidly evolving businesses. Together with business stakeholders, we design a shared language and represent that in a shared model that brings value in solving a problem within a bounded context.
 
-**Aggregate/Consistent Business Rule**  
+**Constraint**  
+A constraint is a restriction we have or need to design from our problem space when we want to perform a command/action, another word could be consistent business constraint or rule. The official color to use is a big yellow post-it. It was called an aggregate before which is now officially a legacy word in EventStorming, since we prefer not to use the word aggregate with business stakeholders.
+
 An aggregate is a Domain-Driven Design pattern that represents cluster of domain objects to make invalid state unrepresentable. We use the big yellow post-it to represent it. Because we want to avoid using the DDD jargon with our stakeholder, we can also use consistent business rule or constraint instead. 
 
 ![Process picture](./resources/software-picture.jpg)
