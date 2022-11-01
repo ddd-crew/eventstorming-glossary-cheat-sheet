@@ -92,7 +92,9 @@ Enforcing the colour coding is playing EventStorming by the rules. Often used af
 
 The outcome of a design level EventStorming is to design clean and maintainable Event-Driven software, to support rapidly evolving businesses. Together with business stakeholders, we design a shared language and represent that in a shared model that brings value in solving a problem within a bounded context.
 
-**Aggregate/Consistent Business Rule**  
+**That yellow thing/constraint**  
+That yellow things or a constraint is a restriction we have or need to design from our problem space when we want to perform a command/action. The official color to use is a big yellow post-it. It was called an aggregate before which is now officially a legacy word in EventStorming, since we prefer not to use the word aggregate with business stakeholders. 
+
 An aggregate is a Domain-Driven Design pattern that represents cluster of domain objects to make invalid state unrepresentable. We use the big yellow post-it to represent it. Because we want to avoid using the DDD jargon with our stakeholder, we can also use consistent business rule or constraint instead. 
 
 ![Process picture](./resources/software-picture.jpg)
