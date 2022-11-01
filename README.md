@@ -12,10 +12,10 @@ Here you will find a combination of a glossary of terms on EventStorming core co
 A Domain Event is the main concept of EventStorming. It is an event that is relevant for the domain experts and contextual for the domain that is being explored. A Domain Event is a verb at the past tense. The official EventStorming colour is orange.
 
 **HotSpot**
-Hotspots are used to visualise and capture hot conflicts. Conflicts caused by, and not exclusive to, inconsistencies (in language), frictions, questions, dissent, objections, issues or procrastinating going deep to explore for later. The official EventStorming colour is neon pink and we also slighly pivot a hotspot when we use it.
+Hotspots are used to visualise and capture hot conflicts. Conflicts caused by, and not exclusive to, inconsistencies (in language), frictions, questions, dissent, objections, issues or procrastinating going deep to explore for later. The official EventStorming colour is neon pink and we also slightly pivot a hotspot when we use it.
 
 **Timeline**
-EventStorming is a powerfull tool when we have a story to tell, when we have a timeline. The paper roll on the wall represents time from left to right. We can have parallel streams from top to bottom on the paper roll.
+EventStorming is a powerful tool when we have a story to tell, when we have a timeline. The paper roll on the wall represents time from left to right. We can have parallel streams from top to bottom on the paper roll.
 
 ![Core Concepts](./resources/core-concepts.jpg)
 
@@ -38,7 +38,7 @@ Because a Hotspot can have a negative association we also give people the chance
 Actor or Agent is a group of people, a department, a team or a specific person involved around a (group of) Domain Event(s). The official colour to use is a small yellow post-it.
 
 **System**  
-A system is a deployable IT System used as a solution for a problem in the domain. When we have finished making the timeline consistent, we can start mapping systems around Domain Events. There can also be duplicates and it can be anything from using Excell to some microservice. The official colour is a wide pink post-it.
+A system is a deployable IT System used as a solution for a problem in the domain. When we have finished making the timeline consistent, we can start mapping systems around Domain Events. There can also be duplicates and it can be anything from using Excel to some microservice. The official colour is a wide pink post-it.
 
 **Value**  
 We can add value like we would do in a value stream map, after we have made the timeline consistent. We do this to make explicit where the value is in our domain. We use the red and green small stickies to show positive and negative value.
@@ -58,10 +58,12 @@ Separating the whole flow into horizontal swimlanes, assigned to given actors or
 ![Big picture tools](./resources/big-picture-tools.jpg)
 
 **Emerging Bounded Contexts**  
-From a Big Picture EventStorming we can picture Emerging Bounded Contexts. They are the first indicators of were to start deep-diving towards designing bounded contexts around business problems.
+From a Big Picture EventStorming we can picture Emerging Bounded Contexts. They are the first indicators of where to start deep-diving towards designing bounded contexts around business problems.
 
 ![Emergent bounded context](./resources/emergent-bounded-contexts.PNG)
 *Source: https://leanpub.com/ddd_first_15_years – Discovering Bounded Contexts with EventStorming — Alberto Brandolini*
+
+![Big picture legend](./resources/big-picture-legend.jpg)
 
 ### Process modelling EventStorming
 
@@ -98,7 +100,7 @@ An aggregate is a Domain-Driven Design pattern that represents cluster of domain
 
 ## Cheat Sheet
 
-### Preperations
+### Preparations
 
 #### Invites
 
