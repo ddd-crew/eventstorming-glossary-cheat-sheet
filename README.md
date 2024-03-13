@@ -17,7 +17,7 @@ Hotspots are used to visualise and capture hot conflicts. Conflicts caused by, a
 **Timeline**
 EventStorming is a powerful tool when we have a story to tell, when we have a timeline. The paper roll on the wall represents time from left to right. We can have parallel streams from top to bottom on the paper roll.
 
-![Core Concepts](./resources/core-concepts.jpg)
+![Core Concepts](/_resources/core-concepts.jpg)
 
 **Chaotic Exploration**  
 Chaotic exploration can be used at the start of EventStorming. Each person writes Domain Events by themselves that they can think off. They will put these Domain Events in order they think they happen on the paper roll.
@@ -29,7 +29,7 @@ A phase happening after chaotic exploration, meaning we try to make the timeline
 
 The goal of Big Picture EventStorming is to assess the health of an existing line of business or explore the viability of a new startup business model. It helps the group create a shared state of mind of the vision of that domain of the company. We can use the output as input for Conway’s law alignment, organising business flow around teams and software with emergent bounded contexts. You can do these workshop with 10-30+ people on one paper roll.
 
-![Example big picture](./resources/big-picture.jpg)
+![Example big picture](/_resources/big-picture.jpg)
 
 **Opportunity**  
 Because a Hotspot can have a negative association we also give people the chance to add opportunities. We use green because of the association it has with something positive. Start using Opportunities after we made a consistent timeline.
@@ -46,30 +46,30 @@ We can add value like we would do in a value stream map, after we have made the 
 **Pivotal Events**  
 With Pivotal Events, we start looking for the few most significant events in the flow. For an e-commerce website, they might look like “Article Added to Catalogue”, “Order Placed”, “Order Shipped”, “Payment Received” and “Order Delivered”. These are often the events with the highest number of people interested. 
 
-![Pivotal Events](./resources/pivotal-events.PNG)
+![Pivotal Events](/_resources/pivotal-events.PNG)
 *Source: https://leanpub.com/ddd_first_15_years – Discovering Bounded Contexts with EventStorming — Alberto Brandolini*
 
 **Swimlanes**   
 Separating the whole flow into horizontal swimlanes, assigned to given actors or departments, is another tempting option since it improves readability. This seems the most obvious choice for people with a background in process modelling.
 
-![Boundaries](./resources/boundaries.PNG)
+![Boundaries](/_resources/boundaries.PNG)
 *Source: https://leanpub.com/ddd_first_15_years – Discovering Bounded Contexts with EventStorming — Alberto Brandolini*
 
-![Big picture tools](./resources/big-picture-tools.jpg)
+![Big picture tools](/_resources/big-picture-tools.jpg)
 
 **Emerging Bounded Contexts**  
 From a Big Picture EventStorming we can picture Emerging Bounded Contexts. They are the first indicators of where to start deep-diving towards designing bounded contexts around business problems.
 
-![Emergent bounded context](./resources/emergent-bounded-contexts.PNG)
+![Emergent bounded context](/_resources/emergent-bounded-contexts.PNG)
 *Source: https://leanpub.com/ddd_first_15_years – Discovering Bounded Contexts with EventStorming — Alberto Brandolini*
 
-![Big picture legend](./resources/big-picture-legend.jpg)
+![Big picture legend](/_resources/big-picture-legend.jpg)
 
 ### Process modelling EventStorming
 
 The goal of process modelling EventStorming is to assess the health of a current process in the company. It helps the group create a shared state of mind of the current status quo of the process, finding bottlenecks and find parts of the system to decouple the existing software.
 
-![Process modelling](./resources/process-modelling.PNG)
+![Process modelling](/_resources/process-modelling.PNG)
 *Source: https://leanpub.com/introducing_eventstorming*
 
 **Policy**  
@@ -81,12 +81,12 @@ Represents decisions, actions or intent. They can be initiated by an actor or fr
 **Query Model/Information**  
 To make decisions an actor might need information, we capture these in a Query Model. For process EventStorming information might be more recognised by stakeholders. We officially use a green post-it to represent a query model.
 
-![Process design](./resources/process-design.jpg)
+![Process design](/_resources/process-design.jpg)
 
 **Enforce colour coding**  
 Enforcing the colour coding is playing EventStorming by the rules. Often used after or during enforcing the timeline it creates a different dynamic. Below you see the colour coding and how they are to be used in the flow of the timeline. 
 
-![Process picture](./resources/process-picture.jpg)
+![Process picture](/_resources/process-picture.jpg)
 
 ### Software Design EventStorming
 
@@ -95,8 +95,8 @@ The outcome of a design level EventStorming is to design clean and maintainable 
 **Constraint**  
 A constraint is a restriction we have or need to design from our problem space when we want to perform a command/action, another word could be consistent business constraint or rule. The official color to use is a big yellow post-it. It was called an aggregate before which is now officially a legacy word in EventStorming, since we prefer not to use the word aggregate with business stakeholders.
 
-![Process picture](./resources/software-picture.jpg)
-![Process design](./resources/software-design.jpg)
+![Process picture](/_resources/software-picture.jpg)
+![Process design](/_resources/software-design.jpg)
 
 ## Cheat Sheet
 
@@ -114,7 +114,7 @@ There is nothing so annoying as not having the right material, so you want to ma
 
 The best picture still is the one from the book EventStorming on leanpub. The idea is to have a modelling surface around 6-8 meters, a table for putting the materials on and a visible legend for people to see. We want to have no seats in sight. Also, you want a room preferable where the windows can open so you can have fresh oxygen in the room and have some food or candies lying around.
 
-![Room setup](./resources/room-setup.png)
+![Room setup](/_resources/room-setup.png)
 *Source: https://leanpub.com/introducing_eventstorming*
 
 #### Facilitation
@@ -149,13 +149,13 @@ After you can discuss with the attendees if they themselves have rules they want
 
 Now it is time to give an intro on EventStorming. I usually tell a microstory to the people explaining why classic forms of collaboration don’t work for me, and why EventStorming is different. These are personal and I advice you to figure out such a story for yourself. Explain the basics of what a domain event is on the legend.
 
-![Domain Event](./resources/domain-event.png)
+![Domain Event](/_resources/domain-event.png)
 *Source: https://leanpub.com/introducing_eventstorming*
 
 **Step 1: Chaotic exploration**
 Start with asking people to write their domain events that they know of for themselves. Here people must work by themselves so that we don’t bias each other. Also, try to avoid answering questions at this point. Tell them that they can put their domain events on the paper the way they feel is correct. We want their perception on the paper. Do not rush this part; this is the essential part of the whole EventStorming. When people start putting their domain events on they can begin to read each other’s events, but make sure they don’t begin discussing them out loud; it can bias or rush the others.
 
-![Start EventStorming](./resources/start-es.png)
+![Start EventStorming](/_resources/start-es.png)
 *Source: https://leanpub.com/introducing_eventstorming*
 
 **Step 2:  Enforce the timeline**
@@ -172,7 +172,7 @@ During Step 2 we will get a lot of conflicts between several perceptions, which 
 **Step 4: Add concepts when needed**
 Whenever another EventStorming concept pop-up, we add them to the legend and introduce these to the group. The picture that explains “almost” everything are the concepts you can add:
 
-![Process picture](./resources/software-picture.jpg)
+![Process picture](/_resources/software-picture.jpg)
 
 ##### Check-out
 
