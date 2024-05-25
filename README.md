@@ -81,7 +81,7 @@ Represents decisions, actions or intent. They can be initiated by an actor or fr
 **Query Model/Information**  
 To make decisions an actor might need information, we capture these in a Query Model. For process EventStorming information might be more recognised by stakeholders. We officially use a green post-it to represent a query model.
 
-![Process design](/_resources/process-design.jpg)
+![Process design tools](/_resources/process-design.jpg)
 
 **Enforce colour coding**  
 Enforcing the colour coding is playing EventStorming by the rules. Often used after or during enforcing the timeline it creates a different dynamic. Below you see the colour coding and how they are to be used in the flow of the timeline. 
@@ -95,8 +95,8 @@ The outcome of a design level EventStorming is to design clean and maintainable 
 **Constraint**  
 A constraint is a restriction we have or need to design from our problem space when we want to perform a command/action, another word could be consistent business constraint or rule. The official color to use is a big yellow post-it. It was called an aggregate before which is now officially a legacy word in EventStorming, since we prefer not to use the word aggregate with business stakeholders.
 
-![Process picture](/_resources/software-picture.jpg)
-![Process design](/_resources/software-design.jpg)
+![Software picture](/_resources/software-picture.jpg)
+![Software design tools](/_resources/software-design.jpg)
 
 ## Cheat Sheet
 
@@ -172,7 +172,7 @@ During Step 2 we will get a lot of conflicts between several perceptions, which 
 **Step 4: Add concepts when needed**
 Whenever another EventStorming concept pop-up, we add them to the legend and introduce these to the group. The picture that explains “almost” everything are the concepts you can add:
 
-![Process picture](/_resources/software-picture.jpg)
+![Software picture](/_resources/software-picture.jpg)
 
 ##### Check-out
 
