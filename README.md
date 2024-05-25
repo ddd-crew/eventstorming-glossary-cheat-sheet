@@ -67,7 +67,7 @@ From a Big Picture EventStorming we can picture Emerging Bounded Contexts. They 
 
 ### Process modelling EventStorming
 
-The goal of process modelling EventStorming is to assess the health of a current process in the company. It helps the group create a shared state of mind of the current status quo of the process, finding bottlenecks and find parts of the system to decouple the existing software.
+The goal of process modelling EventStorming is to assess the health of a current process in the company. It helps the group create a shared state of mind of the current status quo of the process, find bottlenecks and identify parts of the system to decouple from the existing software.
 
 ![Process modelling](/_resources/process-modelling.PNG)
 *Source: https://leanpub.com/introducing_eventstorming*
