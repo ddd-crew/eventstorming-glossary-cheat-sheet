@@ -4,6 +4,10 @@ EventStorming is the smartest approach to collaborate beyond silo boundaries. Th
 
 Here you will find a combination of a glossary of terms on EventStorming core concepts written down in a consistent and comprehensive glossary. Just be sure to try and avoid jargon as much as possible, as it sets up the unnecessary insider-outsider distinction. And a Cheat sheet that you can use facilitating your own EventStorming.
 
+## Translations
+
+- [Brazilian Portuguese (pt-BR)](translations/pt-br/README.md)
+
 ## Glossary
 
 ### Core Concepts
