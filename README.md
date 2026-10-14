@@ -4,6 +4,10 @@ EventStorming is the smartest approach to collaborate beyond silo boundaries. Th
 
 Here you will find a combination of a glossary of terms on EventStorming core concepts written down in a consistent and comprehensive glossary. Just be sure to try and avoid jargon as much as possible, as it sets up the unnecessary insider-outsider distinction. And a Cheat sheet that you can use facilitating your own EventStorming.
 
+## Printable Cheat Sheet
+
+A one-page DIN A4 cheat sheet to hand out to workshop participants is available as [PDF](cheatsheet/eventstorming-cheatsheet.pdf) (source: [cheatsheet.html](cheatsheet/cheatsheet.html), rendered with `google-chrome --headless --no-pdf-header-footer --print-to-pdf=eventstorming-cheatsheet.pdf cheatsheet.html`).
+
 ## Translations
 
 - [Brazilian Portuguese (pt-BR)](translations/pt-br/README.md)
