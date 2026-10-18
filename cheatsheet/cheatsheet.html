@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>EventStorming Cheat Sheet</title>
+<style>
+  @page { size: A4 portrait; margin: 0; }
+  :root {
+    --ink: #1d1d1f;
+    --muted: #55575c;
+    --rule: #d6d6d9;
+    --event: #ff9f1c;
+    --hotspot: #ff2e88;
+    --actor: #ffe761;
+    --system: #f7b7d2;
+    --opportunity: #7ed957;
+    --policy: #c9a7eb;
+    --command: #6fb7ff;
+    --readmodel: #9be38a;
+    --constraint: #fff275;
+    --value-pos: #7ed957;
+    --value-neg: #ff6b6b;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 210mm; height: 297mm; background: #fff; }
+  body {
+    font-family: "IBM Plex Sans Condensed", "IBM Plex Sans", "Arial Narrow", Arial, sans-serif;
+    font-size: 7.95pt;
+    line-height: 1.28;
+    color: var(--ink);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .page {
+    width: 210mm; height: 297mm;
+    padding: 8mm 8mm 6mm;
+    display: flex; flex-direction: column; gap: 3mm;
+    overflow: hidden;
+  }
+
+  /* Header */
+  header {
+    display: flex; align-items: flex-end; justify-content: space-between;
+    border-bottom: 2.2pt solid var(--ink); padding-bottom: 1.6mm;
+  }
+  header h1 { font-family: "IBM Plex Sans", Arial, sans-serif; font-size: 19pt; white-space: nowrap; line-height: 1; font-weight: 700; letter-spacing: -0.3pt; }
+  header h1 span { color: var(--event); }
+  header .tag { font-size: 8pt; color: var(--muted); max-width: 88mm; text-align: right; }
+
+  h2 {
+    font-family: "IBM Plex Sans", Arial, sans-serif;
+    font-size: 9pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6pt;
+    border-bottom: 0.8pt solid var(--ink); padding-bottom: 0.6mm; margin-bottom: 1.4mm;
+  }
+  h3 { font-size: 7.8pt; font-weight: 700; margin: 1.2mm 0 0.4mm; }
+  p + p { margin-top: 0.8mm; }
+  ul, ol { padding-left: 3.6mm; }
+  li { margin-bottom: 0.35mm; }
+  li::marker { color: var(--muted); }
+  b { font-weight: 700; }
+  .muted { color: var(--muted); }
+  code { font-family: "IBM Plex Mono", monospace; font-size: 6.8pt; }
+
+  /* Sticky notes */
+  .s {
+    display: inline-block; padding: 0.4mm 1.3mm; border-radius: 0.4mm;
+    font-weight: 600; color: #111; white-space: nowrap;
+    box-shadow: 0.25mm 0.35mm 0 rgba(0,0,0,0.18);
+  }
+  .event { background: var(--event); }
+  .hotspot { background: var(--hotspot); color: #fff; transform: rotate(-6deg); }
+  .actor { background: var(--actor); }
+  .system { background: var(--system); }
+  .opportunity { background: var(--opportunity); }
+  .policy { background: var(--policy); }
+  .command { background: var(--command); }
+  .readmodel { background: var(--readmodel); }
+  .constraint { background: var(--constraint); }
+  .vpos { background: var(--value-pos); }
+  .vneg { background: var(--value-neg); }
+
+  /* Legend */
+  .legend { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.6mm 3mm; }
+  .legend .item { display: grid; grid-template-columns: 17mm 1fr; gap: 1.6mm; align-items: start; }
+  .legend .note {
+    height: 10.5mm; display: flex; align-items: center; justify-content: center; text-align: center;
+    font-size: 6.4pt; font-weight: 700; line-height: 1.05; padding: 0.6mm;
+    box-shadow: 0.35mm 0.5mm 0 rgba(0,0,0,0.2);
+  }
+  .legend .note.small { height: 7mm; width: 11mm; margin: 1.7mm auto 0; }
+  .legend .note.wide { height: 7mm; margin-top: 1.7mm; }
+  .legend .note.hotspot { width: 12.5mm; margin: 0 auto; }
+  .legend .desc .t { display: block; font-weight: 700; }
+  .legend .when { font-size: 6.3pt; color: var(--muted); }
+
+  /* Main grid */
+  .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4mm; flex: 1; min-height: 0; }
+  .col { display: flex; flex-direction: column; gap: 3mm; min-height: 0; }
+  section { break-inside: avoid; }
+
+  /* Flow diagram */
+  .flow-wrap { border: 0.8pt solid var(--rule); border-radius: 1.2mm; padding: 2mm; background: #fafafa; }
+  .flow-wrap svg { width: 78%; margin: 0 auto; height: auto; display: block; }
+
+  /* Format cards */
+  .formats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.4mm; }
+  .card { border: 0.8pt solid var(--rule); border-top: 2.2mm solid var(--c); border-radius: 1mm; padding: 1.6mm 1.8mm; }
+  .card h3 { margin-top: 0; font-size: 8.4pt; }
+  .card .goal { margin-bottom: 0.8mm; }
+  .card .meta { font-size: 6.6pt; color: var(--muted); margin-bottom: 1mm; }
+  .card .adds { display: flex; flex-wrap: wrap; gap: 0.9mm; margin-top: 0.8mm; font-size: 6.4pt; }
+  .card .adds .s { transform: none; }
+
+  /* Steps */
+  ol.steps { list-style: none; padding-left: 0; counter-reset: st; }
+  ol.steps li { counter-increment: st; position: relative; padding-left: 5mm; margin-bottom: 1mm; }
+  ol.steps li::before {
+    content: counter(st); position: absolute; left: 0; top: 0.1mm;
+    width: 3.8mm; height: 3.8mm; border-radius: 50%; background: var(--ink); color: #fff;
+    font-size: 6pt; font-weight: 700; display: flex; align-items: center; justify-content: center;
+  }
+
+  /* Naming table */
+  table { width: 100%; border-collapse: collapse; }
+  td { padding: 0.7mm 0.8mm; vertical-align: top; border-bottom: 0.5pt solid var(--rule); }
+  td:first-child { width: 19mm; }
+  tr:last-child td { border-bottom: 0; }
+  td i { color: var(--muted); }
+
+  .box { background: #f3f3f5; border-radius: 1mm; padding: 1.8mm 2mm; }
+
+  footer {
+    display: flex; justify-content: space-between; font-size: 6.2pt; color: var(--muted);
+    border-top: 0.6pt solid var(--rule); padding-top: 1mm;
+  }
+  .ex { display: grid; grid-template-columns: 4mm 1fr; gap: 0.6mm 1mm; align-items: center; margin: 1mm 0 1.2mm; }
+  .ex .ok { color: #1f8a3a; font-weight: 700; }
+  .ex .no { color: #d0263a; font-weight: 700; }
+  .ex .s.bad { background: #fde3c4; color: #6b4a1c; text-decoration: line-through; text-decoration-color: #d0263a; }
+  .rules li { margin-bottom: 0.7mm; }
+  .phase-tag { font-size: 6.2pt; color: var(--muted); font-weight: 400; }
+  .qs li { margin-bottom: 0.5mm; }
+  .flavours { display: grid; grid-template-columns: 1fr; gap: 1.2mm; }
+  .flavours div { border-left: 1.6mm solid var(--c); padding: 0.4mm 0 0.4mm 1.6mm; }
+  .legend .item { grid-template-rows: auto 1fr; }
+  .legend .item > .note { grid-column: 1; grid-row: 1; }
+  .legend .item > .desc { grid-column: 2; grid-row: 1 / 3; }
+  .uses { grid-column: 1; grid-row: 2; display: flex; flex-direction: column; gap: 0.5mm; margin-top: 0.4mm; }
+  .u { font-size: 5.8pt; font-weight: 600; padding: 0.1mm 1mm; border-radius: 0.6mm; border-left: 1.2mm solid var(--c); background: #f3f3f5; }
+  .u.bp { --c: var(--event); } .u.pm { --c: var(--policy); } .u.sd { --c: var(--command); }
+  .gl p { margin: 0 0 0.6mm 0; }
+  .legend .desc .c { font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <h1>Event<span>Storming</span> · Cheat Sheet</h1>
+  <div class="tag">Today we map how our business works as a story of events, written on sticky notes along a paper roll. You don't need to prepare anything or know a modelling technique. We need what you know about the work.</div>
+</header>
+
+<section>
+  <h2>Sticky note colours</h2>
+  <div class="legend" style="grid-template-columns: repeat(4, 1fr);">
+    <div class="item"><div class="note event">Order<br>Placed</div>
+      <div class="desc"><span class="t">Domain event</span><span class="c">Orange.</span> Something that happened and matters to the business, written in the past tense. Most of what you write today will be events.</div><span class="uses"><span class="u bp">Big Picture</span><span class="u pm">Process</span><span class="u sd">Design</span></span></div>
+    <div class="item"><div class="note hotspot">Who pays<br>return?</div>
+      <div class="desc"><span class="t">Hotspot</span><span class="c">Neon pink, at a slight angle.</span> A question, conflict, pain point or open issue.</div><span class="uses"><span class="u bp">Big Picture</span><span class="u pm">Process</span><span class="u sd">Design</span></span></div>
+    <div class="item"><div class="note small actor">Customer</div>
+      <div class="desc"><span class="t">Actor</span><span class="c">Small yellow.</span> A role, team or department involved in an event.</div><span class="uses"><span class="u bp">Big Picture</span><span class="u pm">Process</span><span class="u sd">Design</span></span></div>
+    <div class="item"><div class="note wide system">Payment<br>Gateway</div>
+      <div class="desc"><span class="t">System</span><span class="c">Wide pink.</span> A tool or organisation we depend on, such as Excel, an internal app or an external partner.</div><span class="uses"><span class="u bp">Big Picture</span><span class="u pm">Process</span><span class="u sd">Design</span></span></div>
+    <div class="item"><div class="note opportunity">Self-service<br>returns</div>
+      <div class="desc"><span class="t">Opportunity</span><span class="c">Green.</span> An idea for an improvement, the positive counterpart to a hotspot.</div><span class="uses"><span class="u bp">Big Picture</span></span></div>
+    <div class="item"><div class="note small" style="background:linear-gradient(90deg,var(--value-pos) 50%,var(--value-neg) 50%);">+ &nbsp; −</div>
+      <div class="desc"><span class="t">Value</span><span class="c">Small green or red.</span> Where we gain value or money (green) or lose it (red).</div><span class="uses"><span class="u bp">Big Picture</span></span></div>
+    <div class="item"><div class="note policy">Whenever<br>paid, ship</div>
+      <div class="desc"><span class="t">Policy</span><span class="c">Lilac.</span> A reaction: "whenever X happens, we do Y". A person or a system can carry it out.</div><span class="uses"><span class="u pm">Process</span><span class="u sd">Design</span></span></div>
+    <div class="item"><div class="note command">Place<br>Order</div>
+      <div class="desc"><span class="t">Command</span><span class="c">Blue.</span> A decision or action that causes an event, written as an instruction: <i>Place Order</i>.</div><span class="uses"><span class="u pm">Process</span><span class="u sd">Design</span></span></div>
+    <div class="item"><div class="note readmodel">Cart<br>Summary</div>
+      <div class="desc"><span class="t">Information</span><span class="c">Green.</span> What someone looks at to make a decision. Also called a read model.</div><span class="uses"><span class="u pm">Process</span><span class="u sd">Design</span></span></div>
+    <div class="item"><div class="note constraint">Order<br>Rules</div>
+      <div class="desc"><span class="t">Constraint</span><span class="c">Large yellow.</span> The business rules that decide whether an action is allowed.</div><span class="uses"><span class="u sd">Design</span></span></div>
+    <div class="item"><div class="note" style="background:#fff;border:0.8pt solid var(--ink);box-shadow:none;font-size:6.4pt;">Checkout<br>screen</div>
+      <div class="desc"><span class="t">User interface</span><span class="c">White.</span> A rough sketch of a screen or form where someone sees or enters data.</div><span class="uses"><span class="u sd">Design</span></span></div>
+    <div class="item"><div class="note" style="background:#fff;border:0.8pt dashed var(--ink);box-shadow:none;font-size:9pt;">→</div>
+      <div class="desc"><span class="t">Timeline</span><span class="c">Paper roll and tape.</span> Time runs from left to right. Vertical lines mark pivotal events, horizontal tape makes swimlanes.</div><span class="uses"><span class="u bp">Big Picture</span><span class="u pm">Process</span><span class="u sd">Design</span></span></div>
+  </div>
+  <p class="muted" style="margin-top:1.2mm;">You don't need to memorise these. The facilitator adds a colour to the legend on the wall when we start using it, and most sessions begin with orange only. The tags show which <a href="#types" style="color:inherit">type of EventStorming</a> uses each colour.</p>
+</section>
+
+<div class="grid">
+  <!-- Column 1 -->
+  <div class="col">
+    <section>
+      <h2>Ground rules</h2>
+      <ul class="rules">
+        <li>There are no chairs, on purpose. Stay at the wall, and keep laptops and phones away.</li>
+        <li>Everyone gets a marker and writes their own stickies.</li>
+        <li>During the silent phase, write and don't talk. Discussion comes next.</li>
+        <li>Duplicates and mistakes are fine. We clean them up together.</li>
+        <li>If you disagree with something, put a <span class="s hotspot" style="transform:rotate(-4deg)">hotspot</span> on it instead of arguing it out.</li>
+        <li>You can move anyone's sticky. Ask before removing one, because the same word can mean different things to different people.</li>
+        <li>Ask about every term you don't know. Others probably don't know it either.</li>
+        <li>Everyone's sticky counts the same. The people who do the work often know the most.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Writing a domain event</h2>
+      <ul>
+        <li>Write one event per orange sticky, with the verb in the past tense.</li>
+        <li>Use a marker and write large enough to read from 2 m away.</li>
+        <li>Use the words people use at work, and avoid technical jargon.</li>
+        <li>Leave out who did it. People go on yellow stickies.</li>
+        <li>If you're unsure about an event, write it anyway. Others will correct it.</li>
+      </ul>
+      <div class="ex">
+        <span class="ok">✓</span><span><span class="s event">Order Placed</span> <span class="s event">Invoice Sent</span> <span class="s event">Parcel Returned</span></span>
+        <span class="no">✗</span><span><span class="s bad">Order</span> <span class="muted">a noun; nothing happened</span></span>
+        <span class="no">✗</span><span><span class="s bad">Place order</span> <span class="muted">an intention; use the past tense</span></span>
+        <span class="no">✗</span><span><span class="s bad">Customer placed order</span> <span class="muted">leave out the actor</span></span>
+        <span class="no">✗</span><span><span class="s bad">Row saved in DB</span> <span class="muted">a technical detail</span></span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Where to start writing</h2>
+      <p>Try something you worked on last week, what arrives on your desk and what you hand on, the last step before the customer pays, or something that often goes wrong.</p>
+    </section>
+
+  </div>
+
+  <!-- Column 2 -->
+  <div class="col">
+    <section>
+      <h2>Today's agenda</h2>
+      <p class="muted" style="margin-bottom:1.2mm;">This is a typical Big Picture session. Your facilitator may skip or reorder steps.</p>
+      <ol class="steps">
+        <li><b>Check-in.</b> A short round: how are you, and what do you want to get out of today?</li>
+        <li><b>Chaotic exploration.</b> Write every event you can think of, without talking, and stick each one roughly where it happens in time. Read what others put up.</li>
+        <li><b>Enforce the timeline.</b> Now everyone talks. Sort the events into one story, merge duplicates that really mean the same thing, and mark conflicts with hotspots.</li>
+        <li><b>Find the structure.</b> Pivotal events, the few big milestones, split the story into chapters. Swimlanes separate parallel flows.</li>
+        <li><b>People and systems.</b> Add who is involved and which systems they use.</li>
+        <li><b>Walkthrough.</b> One person tells the story from left to right. Interrupt when something doesn't match what you know.</li>
+        <li><b>Reverse narrative.</b> Walk from right to left and ask what must have happened before each event, to find missing steps.</li>
+        <li><b>Problems and opportunities.</b> Add hotspots, opportunities and value wherever you see them.</li>
+        <li><b>Pick a problem.</b> Everyone votes with arrows or dots on the problem to work on next.</li>
+        <li><b>Check-out.</b> What did you learn, and what surprised you?</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Questions to ask</h2>
+      <ul class="qs">
+        <li>What happens right before or right after this?</li>
+        <li>What triggers this? Who decides, and what do they look at?</li>
+        <li>What if it doesn't happen, happens twice or happens late?</li>
+        <li>Is this always the case, or only for some customers?</li>
+        <li>Do we all mean the same thing by this word?</li>
+        <li>Where do we gain or lose money or time?</li>
+      </ul>
+    </section>
+  </div>
+
+  <!-- Column 3 -->
+  <div class="col">
+    <section>
+      <h2 id="types">Types of EventStorming</h2>
+      <div class="flavours">
+        <div style="--c: var(--event);"><b>Big Picture:</b> the whole business end to end, with people from many departments, over one or two days. The result is the timeline, first ideas for bounded contexts and a ranked list of problems.</div>
+        <div style="--c: var(--policy);"><b>Process modelling:</b> one process from start to finish, using all the colours, in half a day to a day. It ends with a step-by-step flow and its weak spots.</div>
+        <div style="--c: var(--command);"><b>Software design:</b> business people and engineers design the software for one part of the business, down to commands, rules and screens.</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>How the colours connect</h2>
+      <div class="flow-wrap">
+        <svg viewBox="0 0 200 128" font-family="IBM Plex Sans Condensed, Arial Narrow, sans-serif" font-size="7" font-weight="700">
+          <defs>
+            <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1d1d1f"/></marker>
+          </defs>
+          <rect x="4" y="6" width="40" height="20" fill="#9be38a"/><text x="24" y="15" text-anchor="middle">Infor-</text><text x="24" y="22" text-anchor="middle">mation</text>
+          <rect x="12" y="46" width="26" height="14" fill="#ffe761"/><text x="25" y="55.5" text-anchor="middle">Actor</text>
+          <rect x="56" y="42" width="40" height="22" fill="#6fb7ff"/><text x="76" y="56" text-anchor="middle">Command</text>
+          <rect x="108" y="20" width="40" height="22" fill="#fff275"/><text x="128" y="34" text-anchor="middle">Constraint</text>
+          <rect x="108" y="66" width="40" height="14" fill="#f7b7d2"/><text x="128" y="75.5" text-anchor="middle">System</text>
+          <rect x="156" y="42" width="40" height="22" fill="#ff9f1c"/><text x="176" y="51" text-anchor="middle">Domain</text><text x="176" y="59" text-anchor="middle">Event</text>
+          <rect x="108" y="98" width="40" height="22" fill="#c9a7eb"/><text x="128" y="112" text-anchor="middle">Policy</text>
+          <g stroke="#1d1d1f" stroke-width="1" fill="none" marker-end="url(#a)">
+            <path d="M24 27 L24 45"/>
+            <path d="M39 53 L55 53"/>
+            <path d="M97 49 L107 36"/>
+            <path d="M97 57 L107 70"/>
+            <path d="M149 36 L155 47"/>
+            <path d="M149 72 L155 60"/>
+            <path d="M176 65 L176 109 L149 109"/>
+            <path d="M107 109 L76 109 L76 65"/>
+            <path d="M176 41 L176 6 L46 12" stroke-dasharray="2 1.5"/>
+          </g>
+          <g font-size="6" font-weight="400" fill="#55575c">
+            <text x="28" y="38">informs</text>
+            <text x="46" y="71" text-anchor="middle">invokes</text>
+            <text x="98" y="31" text-anchor="end">checked by</text>
+            <text x="98" y="80" text-anchor="end">executed on</text>
+            <text x="179" y="88">triggers</text>
+            <text x="79" y="92">issues</text>
+            <text x="110" y="4.5">updates</text>
+          </g>
+        </svg>
+      </div>
+      <p class="muted" style="margin-top:1mm;">An actor looks at information and runs a command. If the constraints allow it, an event happens, and a policy reacts with the next command.</p>
+    </section>
+
+    <section>
+      <h2>Words you'll hear</h2>
+      <div class="gl">
+        <p><b>Domain:</b> The part of the business we're looking at, such as online ordering.</p>
+        <p><b>Pivotal event:</b> A big milestone that several departments care about, such as <i>Order Placed</i>.</p>
+        <p><b>Swimlane:</b> A horizontal lane on the paper roll for one department or a parallel flow.</p>
+        <p><b>Bounded context:</b> An area of the business where each word has one meaning. A change in meaning often marks a border.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>After the session</h2>
+      <ul>
+        <li>Someone photographs the wall and shares the pictures.</li>
+        <li>Each important hotspot gets an owner and a follow-up.</li>
+        <li>Keep using the words the group agreed on.</li>
+      </ul>
+    </section>
+  </div>
+</div>
+
+<footer>
+  <span>Based on the EventStorming Glossary &amp; Cheat Sheet by DDD Crew · github.com/ddd-crew/eventstorming-glossary-cheat-sheet · EventStorming by Alberto Brandolini, eventstorming.com</span>
+  <span>CC BY 4.0</span>
+</footer>
+
+</div>
+</body>
+</html>
