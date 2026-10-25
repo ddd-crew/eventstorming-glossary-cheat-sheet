@@ -28,14 +28,14 @@ EventStorming is a powerful tool when we have a story to tell, when we have a ti
 ![Core Concepts](/_resources/core-concepts.jpg)
 
 **Chaotic Exploration**  
-Chaotic exploration can be used at the start of EventStorming. Each person writes Domain Events by themselves that they can think off. They will put these Domain Events in order they think they happen on the paper roll.
+Chaotic exploration can be used at the start of EventStorming. Each person writes Domain Events by themselves that they can think of. They will put these Domain Events in order they think they happen on the paper roll.
 
 **Enforce the Timeline**  
 A phase happening after chaotic exploration, meaning we try to make the timeline consistent and remove duplicate stickies.
 
 ### Big Picture EventStorming
 
-The goal of Big Picture EventStorming is to assess the health of an existing line of business or explore the viability of a new startup business model. It helps the group create a shared state of mind of the vision of that domain of the company. We can use the output as input for Conway’s law alignment, organising business flow around teams and software with emergent bounded contexts. You can do these workshop with 10-30+ people on one paper roll.
+The goal of Big Picture EventStorming is to assess the health of an existing line of business or explore the viability of a new startup business model. It helps the group create a shared state of mind of the vision of that domain of the company. We can use the output as input for Conway’s law alignment, organising business flow around teams and software with emergent bounded contexts. You can do these workshops with 10-30+ people on one paper roll.
 
 ![Example big picture](/_resources/big-picture.jpg)
 
@@ -81,10 +81,10 @@ The goal of process modelling EventStorming is to assess the health of a current
 *Source: https://leanpub.com/introducing_eventstorming*
 
 **Policy**  
-A policy is a reaction that says “whenever X happens, we do Y”, eventually ending up with in the flow between a Domain Event and a Command/action. We use a big lilac post-it for these. A policy can be an automated process or manual. A policy can also be named a reactor, eventual business constraint or rule or a lie detector because there is always more to policies than you first think.
+A policy is a reaction that says “whenever X happens, we do Y”, eventually ending up in the flow between a Domain Event and a Command/action. We use a big lilac post-it for these. A policy can be an automated process or manual. A policy can also be named a reactor, eventual business constraint or rule or a lie detector because there is always more to policies than you first think.
 
 **Command/Action**  
-Represents decisions, actions or intent. They can be initiated by an actor or from an automated process. During process EventStorming usually, the word "Action" usually fits better with stakeholders than command because it is easier to grasp. We officially use a blue coloured post-it for it.
+Represents decisions, actions or intent. They can be initiated by an actor or from an automated process. During process EventStorming, the word "Action" usually fits better with stakeholders than command because it is easier to grasp. We officially use a blue coloured post-it for it.
 
 **Query Model/Information**  
 To make decisions an actor might need information, we capture these in a Query Model. For process EventStorming information might be more recognised by stakeholders. We officially use a green post-it to represent a query model.
@@ -120,7 +120,7 @@ There is nothing so annoying as not having the right material, so you want to ma
 
 #### Room setup
 
-The best picture still is the one from the book EventStorming on leanpub. The idea is to have a modelling surface around 6-8 meters, a table for putting the materials on and a visible legend for people to see. We want to have no seats in sight. Also, you want a room preferable where the windows can open so you can have fresh oxygen in the room and have some food or candies lying around.
+The best picture still is the one from the book EventStorming on leanpub. The idea is to have a modelling surface around 6-8 meters, a table for putting the materials on and a visible legend for people to see. We want to have no seats in sight. Also, you preferably want a room where the windows can open so you can have fresh oxygen in the room and have some food or candies lying around.
 
 ![Room setup](/_resources/room-setup.png)
 *Source: https://leanpub.com/introducing_eventstorming*
@@ -132,7 +132,7 @@ For an effective EventStorming workshop, you want to have a dedicated facilitato
 As a facilitator:
 
 * You want to have a neutral role so that you can cut long discussions short and visualise them with hotspots.
-* You need to find to balance to when you will intervene and when you will let the discussion flow.
+* You need to find the balance between when you will intervene and when you will let the discussion flow.
 * You are always the first in the room and the last to leave, so you can set up the room correctly and talk with people afterwards.
 * It is your job to facilitate the group and give them feedback and insights about the group interaction so that they can decide what to do. For instance, when you see multiple people looking on their phone, you can tell “I see that part of the group is distracted from the activity by looking on their phones”.
 * You have to observe and let the group figure out what their needs are, however sometimes you need to decide for them when the group can’t.
@@ -155,7 +155,7 @@ After you can discuss with the attendees if they themselves have rules they want
 
 ##### EventStorming
 
-Now it is time to give an intro on EventStorming. I usually tell a microstory to the people explaining why classic forms of collaboration don’t work for me, and why EventStorming is different. These are personal and I advice you to figure out such a story for yourself. Explain the basics of what a domain event is on the legend.
+Now it is time to give an intro on EventStorming. I usually tell a microstory to the people explaining why classic forms of collaboration don’t work for me, and why EventStorming is different. These are personal and I advise you to figure out such a story for yourself. Explain the basics of what a domain event is on the legend.
 
 ![Domain Event](/_resources/domain-event.png)
 *Source: https://leanpub.com/introducing_eventstorming*
@@ -175,7 +175,7 @@ After you are sure everyone is done with putting their domain events on the pape
 * Adding structure with tape when needed, but be careful adding structure too soon. You can lose valuable insights from doing so.
 
 **Step 3: Hotspots**
-During Step 2 we will get a lot of conflicts between several perceptions, which is good. Out of conflict we grow and gain new insights. However, to be able to manage these conflict we add a pinkish sticky where there are conflicts. We call these hotspots. Hotspots can also mean pain points or questions that are unanswered. As a facilitator, you at this phase add the hotspots.
+During Step 2 we will get a lot of conflicts between several perceptions, which is good. Out of conflict we grow and gain new insights. However, to be able to manage these conflicts we add a pinkish sticky where there are conflicts. We call these hotspots. Hotspots can also mean pain points or questions that are unanswered. As a facilitator, you at this phase add the hotspots.
 
 **Step 4: Add concepts when needed**
 Whenever another EventStorming concept pop-up, we add them to the legend and introduce these to the group. The picture that explains “almost” everything are the concepts you can add:
