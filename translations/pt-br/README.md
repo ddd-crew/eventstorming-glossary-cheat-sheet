@@ -95,7 +95,7 @@ Aplicar o código de cores significa conduzir o EventStorming de acordo com suas
 O resultado de um EventStorming no nível de design é o projeto de software orientado a eventos, limpo e sustentável, capaz de apoiar negócios que evoluem rapidamente. Em conjunto com as partes interessadas do negócio, projetamos uma linguagem compartilhada e a representamos em um modelo comum que agrega valor ao resolver um problema dentro de um contexto delimitado.
 
 **Restrição (*Constraint*)**  
-Uma restrição representa uma limitação existente ou que precisa ser considerada no design do espaço de problemas ao executar um comando ou ação. Ela também pode ser entendida como uma regra ou restrição de consistência do negócio. A representação oficial é um post-it amarelo grande. Esse elemento era anteriormente chamado de agregado, termo hoje considerado legado no EventStorming, pois se prefere evitar a palavra “agregado” na colaboração com partes interessadas do negócio.
+Uma restrição representa uma limitação existente ou que precisa ser considerada no design do espaço de problemas ao executar um comando ou ação. Ela também pode ser entendida como uma regra ou restrição de consistência do negócio. A representação oficial é um post-it amarelo-claro grande. Esse elemento era anteriormente chamado de agregado, termo hoje considerado legado no EventStorming, pois se prefere evitar a palavra “agregado” na colaboração com partes interessadas do negócio.
 
 ![Visão de software — conteúdo visual em inglês](../../_resources/software-picture.jpg)
 ![Ferramentas de design de software — conteúdo visual em inglês](../../_resources/software-design.jpg)
